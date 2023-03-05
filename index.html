@@ -27,8 +27,8 @@
                 </ul>
             </nav>
             <img class="logo" src="assets/header/logo.svg" alt="logotipo">
+            <img class="lupa" onclick="clickSearch()" src="assets/header/lupa.svg" alt="lupa">
 
-            <img class="lupa" onclick="clickSearch()" src="assets/header/lupa.svg" alt="">
             <div id="menu__search">
                 <div class="search__opcoes">
                     <input class="search__bar" type="search" placeholder="O que está procurando?">
@@ -37,232 +37,275 @@
                 </div>
             </div>
         </header>
+
         <div class="banner">
 
             <div class="banner__text">
                 <h1 class="banner__title">Projetos de alta complexidade</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua.</p>
+                    et dolore magna aliqua.</p>
                 <button class="botao__roxo">Fazer o cálculo</button>
             </div>
         </div>
+
     </section>
+
     <main>
+
         <section class="sobre">
+
             <h2 class="title">Sobre nós</h2>
             <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.<br>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex
-                ea commodo consequat.
+                ex ea commodo consequat.<br>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. </p>
 
             <div class="sobre__banner">
+                <img src="assets/banner/sobre-nos.png" alt="analisando o projeto">
+                <img src="assets/banner/sobre-nos-tablet.png" alt="analisando o projeto">
 
-                <img src="assets/banner/sobre-nos.png" alt="vendo o projeto">
                 <div class="sobre__text">
                     <h3 class="middle__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut
-                        labore et dolore magna aliqua.</h3>
-                    <button class="botao__branco largo">Mais</button>
+                        tempor et dolore magna aliqua.</h3>
+                    <button class="botao__branco">Mais</button>
                 </div>
             </div>
+
             <div class="sobre__content">
                 <img src="assets/icons/caixa.svg" alt="caixa">
-                <h3 class="middle__subtitle">Consultoria de arquitetura e decoração</h3>
-                <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut
-                    labore
-                    et
-                    dolore magna aliqua.</p>
+                <div class="sobre__container">
+                    <h3 class="middle__subtitle">Consultoria de arquitetura e decoração</h3>
+                    <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor et dolore magna aliqua.</p>
+                </div>
             </div>
+
             <div class="sobre__content">
                 <img src="assets/icons/engrenagens.svg" alt="engrenagens">
-                <h3 class="middle__subtitle">Serviço Arquiteto</h3>
-                <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut
-                    labore
-                    et
-                    dolore magna aliqua.</p>
+                <div class="sobre__container">
+                    <h3 class="middle__subtitle">Serviço Arquiteto</h3>
+                    <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
             </div>
         </section>
+
         <section class="modo">
+
             <h2 class="title">Como trabalhamos</h2>
-            <img class="modo__banner" src="assets/banner/como-trabalhamos.png" alt="">
-            <h3 class="middle__subtitle nopadding">Realizamos uma consulta</h3>
-            <p class="middle__text nopadding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+            <div class="modo__banner">
+                <img src="assets/banner/modo-mob.png" alt="anotando sobre o projeto">
+                <img src="assets/banner/modo-tablet.png" alt="anotando sobre o projeto">
+            </div>
+
+            <h3 class="middle__subtitle">Realizamos uma consulta</h3>
+            <p class="middle__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.<br>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
+                dolore magna aliqua.<br>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
+                consequat.<br>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. </p>
+                dolore magna aliqua.</p>
             <span>
-                <button class="botao__roxo pequeno">Mais</button>
-                <button class="botao__branco pequeno">Contrate-nos</button>
+                <button class="botao__roxo midbutton">Mais</button>
+                <button class="botao__branco midbutton">Contrate-nos</button>
             </span>
         </section>
+
         <section class="vantagens">
+
+            <h2 class="title">Vantagens</h2>
             <div class="vantagens__containers">
-                <h2 class="title">Vantagens</h2>
-                <div class="vantagem__container">
+
+                <div class="vantagem__container globo">
                     <img src="assets/icons/globo.svg" alt="globo caindo">
                     <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. </p>
+                        tempor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi
+                        ut aliquip ex ea commodo consequat. </p>
                 </div>
-                <div class="vantagem__container">
+
+                <div class="vantagem__container caderneta">
                     <img src="assets/icons/caderneta.svg" alt="caderneta">
                     <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="vantagem__container">
+
+                <div class="vantagem__container diatodo">
                     <img src="assets/icons/24.svg" alt="vinte e quatro horas">
                     <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor</p>
+                        tempor
+                    </p>
                 </div>
-                <div class="vantagem__container">
+
+                <div class="vantagem__container mapa">
                     <img src="assets/icons/mapa.svg" alt="mapa">
                     <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="vantagem__container">
+
+                <div class="vantagem__container aviao">
                     <img src="assets/icons/aviao.svg" alt="aviao">
                     <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="vantagem__container">
-                    <img src="assets/icons/calendario.svg" alt="calendario">
-                    <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                        tempor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
-                <div class="vantagem__container">
+
+                <div class="vantagem__container calendario">
+                    <img src="assets/icons/calendario.svg" alt="calendario">
+                    <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi.
+                    </p>
+                </div>
+
+                <div class="vantagem__container terra">
                     <img src="assets/icons/globo-terrestre.svg" alt="globo terrestre">
                     <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. </p>
+                        tempor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi
+                        ut aliquip ex ea commodo consequat.
+                    </p>
                 </div>
             </div>
         </section>
+
         <section class="servicos">
+
             <h2 class="title">Serviços</h2>
             <div class="servico">
-                <img class="servico__imagem" src="assets/servicos/ferreiro.png" alt="">
+
+                <img class="servico__imagem" src="assets/servicos/ferreiro.png" alt="ferreiro trabalhando">
+
                 <div class="servico__container">
                     <span class="servico__text">
-                        <h3 class="middle__subtitle last">Lorem ipsum</h3>
+                        <h3 class="servico__subtitle">Lorem ipsum</h3>
                         <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </span>
-                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt=""></button>
+                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt="flecha"></button>
                 </div>
+
             </div>
+
             <div class="servico">
-                <img class="servico__imagem" src="assets/servicos/trator.png" alt="">
+
+                <img class="servico__imagem" src="assets/servicos/trator.png" alt="trator">
+
                 <div class="servico__container">
                     <span class="servico__text">
-                        <h3 class="middle__subtitle last">Lorem ipsum</h3>
+                        <h3 class="servico__subtitle">Lorem ipsum</h3>
                         <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </span>
-                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt=""></button>
+                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt="flecha"></button>
                 </div>
             </div>
-            <div class="servico">
-                <img class="servico__imagem" src="assets/servicos/lixadeiro.png" alt="">
+
+            <div class="servico lixadeiro">
+                <img class="servico__imagem" src="assets/servicos/lixadeiro.png" alt="lixando a madeira">
                 <div class="servico__container">
                     <span class="servico__text">
-                        <h3 class="middle__subtitle last">Lorem ipsum</h3>
+                        <h3 class="servico__subtitle">Lorem ipsum</h3>
                         <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </span>
-                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt=""></button>
+                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt="flecha"></button>
                 </div>
             </div>
+
             <div class="servico">
-                <img class="servico__imagem" src="assets/servicos/empilhador.png" alt="">
+                <img class="servico__imagem" src="assets/servicos/empilhador.png" alt="empilhando">
                 <div class="servico__container">
                     <span class="servico__text">
-                        <h3 class="middle__subtitle last">Lorem ipsum</h3>
+                        <h3 class="servico__subtitle">Lorem ipsum</h3>
                         <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
                     </span>
-                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt=""></button>
+                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt="flecha"></button>
                 </div>
             </div>
+
             <div class="servico">
-                <img class="servico__imagem" src="assets/servicos/furadeira.png" alt="">
+                <img class="servico__imagem" src="assets/servicos/furadeira.png" alt="furando">
                 <div class="servico__container">
                     <span class="servico__text">
-                        <h3 class="middle__subtitle last">Lorem ipsum</h3>
+                        <h3 class="servico__subtitle">Lorem ipsum</h3>
                         <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
                     </span>
-                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt=""></button>
+                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt="flecha"></button>
                 </div>
             </div>
+
             <div class="servico">
-                <img class="servico__imagem" src="assets/servicos/medidor.png" alt="">
+                <img class="servico__imagem" src="assets/servicos/medidor.png" alt="medindo">
                 <div class="servico__container">
                     <span class="servico__text">
-                        <h3 class="middle__subtitle last">Lorem ipsum</h3>
+                        <h3 class="servico__subtitle">Lorem ipsum</h3>
                         <p class="middle__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
                     </span>
-                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt=""></button>
+                    <button class="servico__button"><img src="assets/icons/Flecha 32px.svg" alt="flecha"></button>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <h2 class="footer__title">Envie sua aplicação</h2>
+
         <form>
+            <h2 class="footer__title">Envie sua aplicação</h2>
             <input type="text" placeholder="Nome*">
             <select name="">
                 <option value="">Cidade</option>
+                <option>São Paulo</option>
+                <option> Rio de janeiro</option>
+                <option>Manaus</option>
             </select>
+
             <input type="date" id="data" value="2023-10-20">
             <label for="data"></label>
             <input type="text" placeholder="Email*">
             <input type="text" placeholder="Mensagem">
-            <span>
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox">Concordo com a Política de privacidade</label>
-            </span>
-            <button class="botao__roxo nomargin ">Concluir</button>
+
+            <div class="footer__acordo">
+                <span>
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">Concordo com a Política de privacidade</label>
+                </span>
+                <button class="acordo--concordo">Concluir</button>
+            </div>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
                 dolore magna aliqua. </p>
-            <img class="footer__logo" src="assets/footer/logo-footer.svg" alt="">
         </form>
 
-        <ul class="links">
-            <li><a class="link" href="">Sobre nós</a></li>
-            <li><a class="link__linha__branca"href="">Como trabalhamos</a></li>
-            <li><a class="link__linha">Vantagens</a></li>
-            <li><a class="link"href="">Serviços</a></li>
-            <li><a class="link"href="">Contatos</a></li>
-        </ul>
-        <ul class="social">
-            <li><a href=""><img src="assets/footer/instagram.svg" alt=""></a></li>
-            <li><a href=""><img src="assets/footer/facebook.svg" alt=""></a></li>
-        </ul>
+        <div class="footer__links">
+            <img class="footer__logo item-1" src="assets/footer/logo-footer.svg" alt="logotipo">
+
+            <ul class="links item-2">
+                <li><a class="link" href="">Sobre nós</a></li>
+                <li><a class="link__linha__branca" href="">Como trabalhamos</a></li>
+                <li><a class="link__linha">Vantagens</a></li>
+            </ul>
+
+            <ul class="links item-3">
+                <li><a class="link" href="">Serviços</a></li>
+                <li><a class="link" href="">Contatos</a></li>
+            </ul>
+
+            <ul class="social item-4">
+                <li><a href=""><img src="assets/footer/instagram.svg" alt="logotipo do instagram"></a></li>
+                <li><a href=""><img src="assets/footer/facebook.svg" alt="logotipo do facebook"></a></li>
+            </ul>
+        </div>
     </footer>
     <script>
         function clickMenu() {
