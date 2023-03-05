@@ -8,14 +8,11 @@
     --placeholder-color: #ADB5BD;
     --text-font: 'Open Sans', sans-serif;
     --title-font: 'Montserrat', sans-serif;
-
 }
-
 
 body {
     padding: 0;
     margin: 0;
-
 }
 
 main {
@@ -29,7 +26,7 @@ main {
 
 #menu__opcoes {
     display: none;
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
     position: absolute;
     width: 320px;
     top: 0;
@@ -37,35 +34,36 @@ main {
     margin: 0;
     padding: 20px;
     border-radius: 0px 0px 16px 16px;
-
 }
-.menu ul li{
-    margin:15px 0 20px 0 ;
-list-style: none;
 
+.menu ul li {
+    list-style: none;
+    margin: 10px 0 15px 0;
 }
-.voltar{
+
+.voltar {
     cursor: pointer;
     margin: 0 0 15px 0;
 }
-.menu ul button{
+
+.menu ul button {
     font-family: var(--title-font);
     font-size: 14px;
     font-weight: 700;
+    margin: 0;
     padding: 10px;
+    list-style: none;
     border-radius: 8px;
     background-color: transparent;
     border: 1px solid #D3D7DB;
-    
 }
+
 #menu__search {
     display: none;
     position: absolute;
     width: 100%;
     border-radius: 0px 0px 32px 32px;
     background-color: var(--header-color);
-
-
 }
 
 .search__opcoes {
@@ -76,14 +74,12 @@ list-style: none;
 }
 
 header {
-
     justify-content: space-between;
     width: 100%;
     display: flex;
     background-color: var(--header-color);
     align-items: center;
     border-radius: 0px 0px 32px 32px;
-
 }
 
 .menu,
@@ -99,7 +95,6 @@ header {
     outline: none;
     border: none;
     border-bottom: 1px solid #ADB5BD;
-
 }
 
 .search__lupa__roxa {
@@ -143,6 +138,20 @@ header {
     margin: 20px 0 0 15px;
 }
 
+.botao__branco {
+    font-family: var(--title-font);
+    font-weight: 700;
+    padding: 13px 32px;
+    color: #845EF7;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #845EF7;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .botao__roxo {
     font-family: var(--text-font);
     font-weight: 700;
@@ -151,39 +160,54 @@ header {
     color: #FFFFFF;
     border-radius: 8px;
     background-color: #845EF7;
-    padding: 10px 20px 10px 20px;
+    padding: 13px 32px;
     margin: 20px 0 50px 15px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.largo {
+.acordo--concordo {
+    cursor: pointer;
+    font-family: var(--text-font);
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 8px;
+    background-color: #845EF7;
+    margin: 0;
+    padding: 13px 32px;
+}
+
+.sobre button {
     width: 93%;
     margin: 20px 0 40px 0;
 }
 
-.pequeno {
+.midbutton {
     width: 50%;
-    margin: 0 10px 0 0;
-    height: 44px;
+    padding: 15px;
+    margin: 0 8px 0 8px;
+    font-size: 14px;
 }
 
 .modo span {
     display: flex;
-    padding: 0;
-    width: 100%;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .sobre {
     width: 100%;
     background-color: var(--section-color-1);
-    margin-top: 30px;
+    margin: 30px 0 0 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     font-family: var(--text-font);
-
 }
 
 .title {
@@ -204,29 +228,27 @@ header {
 }
 
 .sobre__text {
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: #FFFFFF;
     border-radius: 16px;
-
-
 }
 
 .sobre__banner {
     width: 90%;
     overflow: hidden;
     display: grid;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 150px 0px 1fr;
     text-align: center;
     border: 1px solid #D3D7DB;
     border-radius: 16px;
     margin-bottom: 10px;
-
 }
 
 .sobre__banner img {
     object-fit: cover;
     width: 100%;
-
 }
 
 .middle__subtitle {
@@ -235,21 +257,15 @@ header {
     font-weight: 700;
     font-size: 14px;
     width: 250px;
-    margin: 10px 0 0 0;
-    padding: 10px 0 0 10px;
+    margin: 15px 20px 0 10px;
 }
 
-.botao__branco {
-    font-family: var(--title-font);
+.servico__subtitle {
+    color: #5A27F2;
+    font-family: var(--text-font);
     font-weight: 700;
-    padding: 10px 20px 10px 20px;
-
-    color: #845EF7;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #845EF7;
-    cursor: pointer;
-
+    font-size: 14px;
+    margin: 15px 0 20px 20px;
 }
 
 .sobre__content {
@@ -260,14 +276,19 @@ header {
     width: 90%;
     border: 1px solid #D3D7DB;
     border-radius: 16px;
+    flex-direction: column;
+}
 
-
+.sobre__text h3 {
+    align-self: flex-start;
+    margin: 15px 20px 0 20px;
 }
 
 .sobre__content img {
     width: 55px;
-    margin: 15px 0 0px 0;
-    padding: 10px;
+    margin: 15px 0 0 10px;
+    width: 65px;
+    height: 65px;
 }
 
 .modo {
@@ -278,20 +299,17 @@ header {
 }
 
 .modo h2 {
-    width: 200px;
+    width: 250px;
 }
 
-.modo__banner {
-    margin: 20px 0 0 0;
+.modo__banner img {
     width: 100%;
 }
 
-.nomargin {
-    margin: 0;
-}
-
-.nopadding {
-    padding: 0;
+.modo__banner {
+    margin: 20px 0 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 0px;
 }
 
 .vantagens {
@@ -317,8 +335,6 @@ header {
 }
 
 .vantagens__containers {
-    display: grid;
-    grid-template-rows: 50px 1fr 80px 100px 80px 1fr 200px 1fr;
     width: 90%;
 }
 
@@ -337,11 +353,14 @@ header {
     border-radius: 16px;
     background-color: var(--section-color-1);
     margin: 20px 0 0 0;
+}
 
+.servicos p {
+    margin: 15px 0 20px 20px;
+    padding: 0;
 }
 
 .servico__container {
-
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
@@ -358,12 +377,6 @@ header {
     border-radius: 16px 16px 0 0;
 }
 
-.last {
-    color: #5A27F2;
-    margin: 0;
-    width: 100px;
-}
-
 footer {
     background-color: #000000;
     display: flex;
@@ -374,17 +387,19 @@ footer {
 
 .footer__title {
     color: #FFFFFF;
-    width: 200px;
     font-family: var(--title-font);
     font-weight: 400;
     font-size: 32px;
     margin: 15px 0 15px 0;
-    width: 90%;
 }
 
 footer form {
     display: flex;
     flex-direction: column;
+    width: 90%;
+}
+
+.footer__links {
     width: 90%;
 }
 
@@ -400,12 +415,14 @@ footer form input {
 
 footer form input::placeholder {
     color: #ADB5BD;
-
     margin: 10px 0 0 0;
 }
 
 form select {
-
+    background-image: url(assets/icons/select-svg.svg);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+    appearance: none;
     background-color: #30373E;
     color: #ADB5BD;
     border-radius: 8px;
@@ -434,13 +451,12 @@ span label {
     font-weight: 400;
 }
 
-form button {
+.acordo--concordo {
     width: 100%;
-    padding: 0;
+    padding: 13px 32px;
 }
 
 form p {
-
     font-family: var(--text-font);
     font-size: 14px;
     line-height: 25px;
@@ -462,7 +478,7 @@ form p {
     font-family: var(--title-font);
     font-size: 16px;
     font-weight: 700;
-    margin: 5px 0 10px 0;
+    margin: 0;
 }
 
 .links li a {
@@ -471,10 +487,13 @@ form p {
 }
 
 .links li {
-    margin: 10px 0 10px 0;
+    margin: 15px 0 0 0;
 }
 
+
 .link__linha {
+    padding-bottom: 5px;
+    height: 20px;
     color: #845EF7;
     border-bottom: 1px solid #845EF7;
 }
@@ -484,18 +503,17 @@ form p {
 }
 
 .link__linha__branca {
+    padding-bottom: 5px;
     color: #ffffff;
     border-bottom: 1px solid #ffffff;
-
 }
 
 .social {
     width: 90%;
     display: flex;
-
     list-style: none;
     padding: 0;
-    margin: 10px 0 30px 0;
+    margin: 30px 0 30px 0;
 }
 
 .social a {
@@ -504,7 +522,282 @@ form p {
     height: 40px;
 }
 
-a,
-button {
-    cursor: pointer;
+.globo {
+    grid-area: globo;
+}
+
+.caderneta {
+    grid-area: caderneta;
+}
+
+.diatodo {
+    grid-area: diatodo;
+
+}
+
+.mapa {
+    grid-area: mapa;
+}
+
+.aviao {
+    grid-area: aviao;
+}
+
+.calendario {
+    padding: 10px;
+    grid-area: calendario;
+}
+
+.terra {
+    grid-area: terra;
+}
+
+@media (min-width:768px)
+
+/*site para tablet*/
+    {
+
+    .menu,
+    .lupa {
+        margin: 25px 40px 20px 40px;
+    }
+
+    .menu ul button {
+        font-size: 18px;
+        margin: 10px 30px 10px 30px;
+    }
+
+    .voltar {
+        margin: 0 0 30px 30px;
+        width: 20px;
+    }
+
+    #menu__opcoes {
+        width: 420px;
+    }
+
+    .banner__title {
+        font-size: 72px;
+        width: 300px;
+        margin: 40px 40px 20px 40px;
+    }
+
+    .banner {
+        background-position: 100%;
+        margin-top: 40px;
+    }
+
+    .banner__text p {
+        margin: 10px 0 0 40px;
+        font-size: 24px;
+        width: 355px;
+        font-weight: 700;
+    }
+
+
+    .acordo--concordo {
+        width: 30%;
+        border-radius: 16px;
+        font-size: 18px;
+        padding: 18px 32px;
+    }
+
+    .banner button {
+        margin: 40px 0 70px 40px;
+    }
+
+    .title {
+        font-size: 48px;
+        margin: 50px 0 10px 0;
+    }
+
+    .middle__text {
+        font-size: 18px;
+        margin: 10px 0 30px 0;
+        line-height: 32px;
+    }
+
+    .sobre__banner {
+        grid-template-rows: 0px 400px 150px;
+        border-radius: 24px 24px 34px 34px;
+    }
+
+    .sobre__text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px 20px 30px;
+        border-radius: 32px;
+    }
+
+    .sobre button {
+        margin: 10px;
+        width: 15%;
+        border-radius: 5px;
+    }
+
+    .middle__subtitle {
+        line-height: 180%;
+        letter-spacing: 0.01em;
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .sobre__content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sobre__content img {
+        width: 108px;
+        height: 120px;
+        padding: 30px;
+    }
+
+    .sobre {
+        padding: 0 0 30px 0;
+        width: 100%;
+    }
+
+    .modo h2 {
+        width: 500px;
+    }
+
+    .modo__banner {
+        margin: 20px 0 10px 0;
+        display: grid;
+        grid-template-columns: 0px 1fr;
+    }
+
+    .modo span {
+        display: grid;
+        width: 50%;
+        grid-template-columns: 1fr 2fr;
+        gap: 18px;
+    }
+
+    .modo h3 {
+        font-size: 24px;
+    }
+
+    .vantagem__container img {
+
+        width: 58px;
+        height: 60px;
+        margin: 10px 10px 0 10px;
+
+        align-self: start;
+
+    }
+
+    .vantagem__container {
+        border-radius: 32px;
+        margin: 0;
+        padding: 20px;
+        letter-spacing: 0.01em;
+    }
+
+    .vantagens h2 {
+        margin: 50px 0 40px 0;
+    }
+
+    .vantagens__containers {
+        display: grid;
+        padding-bottom: 50px;
+        gap: 20px;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "globo caderneta"
+            "globo calendario"
+            "globo diatodo"
+            "mapa diatodo"
+            "mapa terra"
+            "aviao terra"
+            "aviao terra"
+            "aviao ."
+            "aviao ."
+        ;
+    }
+
+    .servicos {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    .servico {
+        width: 49%;
+    }
+
+    .servico__container p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .lixadeiro {
+        height: 388px;
+    }
+
+    .footer__title {
+        font-size: 48px;
+        margin: 50px 0 0 0px;
+    }
+
+    footer form input,
+    form select {
+        padding: 20px;
+        font-size: 16px;
+        margin: 20px 0 0 0;
+    }
+
+    footer form {
+        align-self: flex-start;
+        width: 80%;
+        margin-left: 50px;
+    }
+
+    .footer__acordo {
+        align-self: flex-start;
+        display: flex;
+        justify-content: left;
+        flex-direction: row-reverse;
+        gap: 20px;
+        margin: 40px 0 10px 0;
+    }
+
+    .footer__acordo label {
+        font-size: 14px;
+    }
+
+    .item-1 {
+        grid-area: item-1;
+    }
+
+    .item-2 {
+        grid-area: item-2;
+    }
+
+    .item-3 {
+        grid-area: item-3;
+    }
+
+    .item-4 {
+        grid-area: item-4;
+    }
+
+    .footer__links {
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-areas:
+            "item-1 . ."
+            "item-4 item-2 item-3";
+    }
+
+    .midbutton {
+        width: auto;
+        font-size: 18px;
+    }
 }
