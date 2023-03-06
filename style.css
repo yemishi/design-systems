@@ -279,11 +279,6 @@ header {
     flex-direction: column;
 }
 
-.sobre__text h3 {
-    align-self: flex-start;
-    margin: 15px 20px 0 20px;
-}
-
 .sobre__content img {
     width: 55px;
     margin: 15px 0 0 10px;
@@ -490,6 +485,10 @@ form p {
     margin: 15px 0 0 0;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url(assets/icons/calendario-icon.svg);
+
+}
 
 .link__linha {
     padding-bottom: 5px;
@@ -624,16 +623,21 @@ form p {
 
     .sobre__text {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 30px 20px 30px;
+        padding: 20px 30px 30px 30px;
         border-radius: 32px;
     }
 
     .sobre button {
-        margin: 10px;
+        font-family: var(--title-font);
+        font-weight: 700;
+        font-size: 18px;
+        margin: 20px;
         width: 15%;
-        border-radius: 5px;
+        border-radius: 8px;
+        padding: 18px 32px;
     }
 
     .middle__subtitle {
@@ -646,6 +650,7 @@ form p {
     .sobre__content {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
     .sobre__content img {
@@ -676,18 +681,19 @@ form p {
         gap: 18px;
     }
 
+    .modo {
+        padding-bottom: 50px;
+    }
+
     .modo h3 {
         font-size: 24px;
     }
 
     .vantagem__container img {
-
         width: 58px;
         height: 60px;
         margin: 10px 10px 0 10px;
-
         align-self: start;
-
     }
 
     .vantagem__container {
@@ -725,6 +731,7 @@ form p {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
+        padding-bottom: 50px;
     }
 
 
@@ -735,6 +742,7 @@ form p {
     .servico__container p {
         width: 100%;
         font-size: 16px;
+        margin: 0 0 20px 20px;
     }
 
     .lixadeiro {
@@ -798,6 +806,19 @@ form p {
 
     .midbutton {
         width: auto;
+        font-size: 18px;
+    }
+
+    .servico__subtitle {
+        font-size: 24px;
+        margin: 15px 0 10px 20px;
+    }
+
+    form p {
+        font-size: 16px;
+    }
+
+    footer li {
         font-size: 18px;
     }
 }
