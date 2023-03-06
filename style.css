@@ -253,10 +253,10 @@ header {
 
 .middle__subtitle {
     text-align: start;
+     align-self: start;
     font-family: var(--text-font);
     font-weight: 700;
     font-size: 14px;
-    width: 250px;
     margin: 15px 20px 0 10px;
 }
 
