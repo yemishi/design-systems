@@ -265,7 +265,7 @@ header {
     font-family: var(--text-font);
     font-weight: 700;
     font-size: 14px;
-    margin: 15px 0 20px 20px;
+    margin: 15px 0 5px 20px;
 }
 
 .sobre__content {
@@ -294,7 +294,7 @@ header {
 }
 
 .modo h2 {
-    width: 250px;
+    width: 220px;
 }
 
 .modo__banner img {
@@ -313,7 +313,7 @@ header {
     flex-direction: column;
     width: 100%;
     background-color: var(--section-color-1);
-    margin: 15px 0 15px 0;
+    margin: 20px 0 15px 0;
 }
 
 .vantagem__container {
@@ -351,7 +351,7 @@ header {
 }
 
 .servicos p {
-    margin: 15px 0 20px 20px;
+    margin: 0px 0 20px 20px;
     padding: 0;
 }
 
