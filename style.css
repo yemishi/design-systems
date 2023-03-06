@@ -252,8 +252,9 @@ header {
 }
 
 .middle__subtitle {
-    text-align: start;
-     align-self: start;
+    width: auto;
+    text-align: left;
+    align-self: start;
     font-family: var(--text-font);
     font-weight: 700;
     font-size: 14px;
@@ -543,7 +544,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .calendario {
-    padding: 10px;
     grid-area: calendario;
 }
 
