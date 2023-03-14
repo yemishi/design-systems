@@ -127,20 +127,24 @@ header {
 .banner__title {
     font-family: var(--title-font);
     font-weight: 800;
+    font-size: 24px;
     margin: 20px 0 0 15px;
     width: 250px;
 }
 
-.banner__text p {
-    width: 220px;
+.banner__text {
+    line-height: 19px;
+    width: 198px;
+    font-size: 14px;
     font-family: var(--text-font);
     font-weight: 600;
-    margin: 20px 0 0 15px;
+    margin: 10px 0 0 15px;
 }
 
 .botao__branco {
     font-family: var(--title-font);
     font-weight: 700;
+    font-size: 14px;
     padding: 13px 32px;
     color: #845EF7;
     background-color: #ffffff;
@@ -168,16 +172,21 @@ header {
     justify-content: center;
 }
 
+.banner__container button {
+    font-family: var(--title-font);
+}
+
 .acordo--concordo {
     cursor: pointer;
-    font-family: var(--text-font);
+    font-family: var(--title-font);
     font-weight: 700;
     font-size: 14px;
+    width: 100%;
+    padding: 13px 32px;
     border: none;
     color: #FFFFFF;
     border-radius: 8px;
     background-color: #845EF7;
-    margin: 0;
     padding: 13px 32px;
 }
 
@@ -210,24 +219,53 @@ header {
     font-family: var(--text-font);
 }
 
+.sobre span {
+    width: 90%;
+}
+
+.sobre span p {
+    width: 99%;
+}
+
 .title {
     font-family: var(--title-font);
     font-weight: 400;
+    font-size: 32px;
     width: 90%;
-    margin: 10px 0 0 0;
+    margin: 10px 0 10px 0;
 }
 
 .middle__text {
     font-family: var(--text-font);
     font-weight: 400;
     margin: 10px 0 15px 0;
-    width: 90%;
-    padding: 0 10px 0 10px;
+    width: 89%;
     font-size: 14px;
     line-height: 23px;
 }
 
+.modo__text {
+    font-family: var(--text-font);
+    font-weight: 400;
+    margin: 10px 0 15px 0;
+    font-size: 14px;
+    line-height: 24px;
+    width: 102%;
+}
+
+.modo__subtitle {
+    font-family: var(--text-font);
+    font-weight: 700;
+    font-size: 14px;
+    margin: 10px 0 0;
+}
+
+.modo__container {
+    width: 95%;
+}
+
 .sobre__text {
+    border: 1px solid #D3D7DB;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -241,9 +279,12 @@ header {
     display: grid;
     grid-template-rows: 150px 0px 1fr;
     text-align: center;
-    border: 1px solid #D3D7DB;
     border-radius: 16px;
     margin-bottom: 10px;
+}
+
+.sobre__container p {
+    margin: 10px 0 15px 10px;
 }
 
 .sobre__banner img {
@@ -252,13 +293,15 @@ header {
 }
 
 .middle__subtitle {
-    width: auto;
-    text-align: left;
-    align-self: start;
     font-family: var(--text-font);
     font-weight: 700;
     font-size: 14px;
     margin: 15px 20px 0 10px;
+    letter-spacing: 0.01em;
+    line-height: 25px;
+    width: auto;
+    text-align: left;
+    align-self: start;
 }
 
 .servico__subtitle {
@@ -283,7 +326,6 @@ header {
 .sobre__content img {
     width: 55px;
     margin: 15px 0 0 10px;
-    width: 65px;
     height: 65px;
 }
 
@@ -314,20 +356,28 @@ header {
     flex-direction: column;
     width: 100%;
     background-color: var(--section-color-1);
-    margin: 20px 0 15px 0;
+    margin: 50px 0 15px 0;
 }
 
-.vantagem__container {
+.vantagem {
     display: flex;
     align-items: flex-start;
     border: 1px solid #D3D7DB;
     border-radius: 16px;
     justify-content: center;
-    margin: 5px 0 10px 0;
+    margin: 20px 0 10px 0;
 }
 
-.vantagem__container img {
-    margin: 10px 5px 0 10px;
+.vantagem__text {
+    font-family: var(--text-font);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 20px 10px 20px 10px;
+    width: 65%;
+}
+
+.vantagem img {
+    margin: 15px 15px 0 0px;
 }
 
 .vantagens__containers {
@@ -340,6 +390,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .servico {
@@ -378,6 +429,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 
 }
 
@@ -401,7 +453,7 @@ footer form {
 
 footer form input {
     padding: 15px;
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0;
     background-color: #30373E;
     color: #ADB5BD;
     border-radius: 8px;
@@ -417,14 +469,14 @@ footer form input::placeholder {
 form select {
     background-image: url(assets/icons/select-svg.svg);
     background-repeat: no-repeat;
-    background-position: 97% 50%;
+    background-position: 93% 50%;
     appearance: none;
     background-color: #30373E;
     color: #ADB5BD;
     border-radius: 8px;
     border: none;
     padding: 15px 15px 15px 10px;
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 form span {
@@ -442,14 +494,9 @@ form span {
 
 span label {
     font-family: var(--text-font);
-    font-size: 13px;
+    font-size: 12px;
     margin: 0 0 0 10px;
     font-weight: 400;
-}
-
-.acordo--concordo {
-    width: 100%;
-    padding: 13px 32px;
 }
 
 form p {
@@ -586,13 +633,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         margin-top: 40px;
     }
 
-    .banner__text p {
+    .banner__text {
         margin: 10px 0 0 40px;
         font-size: 24px;
         width: 355px;
+        line-height: 130%;
         font-weight: 700;
     }
-
 
     .acordo--concordo {
         width: 30%;
@@ -603,11 +650,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     .banner button {
         margin: 40px 0 70px 40px;
+        font-size: 18px;
+        padding: 18px 32px;
+
+    }
+
+    main {
+        margin-top: 20px;
     }
 
     .title {
         font-size: 48px;
-        margin: 50px 0 10px 0;
+        margin: 30px 0 10px 0;
     }
 
     .middle__text {
@@ -616,8 +670,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         line-height: 32px;
     }
 
+    .sobre span {
+        width: 90%;
+    }
+
     .sobre__banner {
-        grid-template-rows: 0px 400px 150px;
+        grid-template-rows: 0px 475px 170px;
         border-radius: 24px 24px 34px 34px;
     }
 
@@ -635,28 +693,44 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         font-weight: 700;
         font-size: 18px;
         margin: 20px;
-        width: 15%;
+        width: 20%;
         border-radius: 8px;
         padding: 18px 32px;
     }
 
+    .sobre span p {
+        width: 95%;
+    }
+
     .middle__subtitle {
         line-height: 180%;
+        align-self: center;
         letter-spacing: 0.01em;
-        width: 70%;
+        width: 72%;
         font-size: 18px;
+    }
+
+    .modo__subtitle {
+        line-height: 32px;
+        font-size: 24px;
     }
 
     .sobre__content {
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+        padding: 30px 0 30px 0px;
+        border-radius: 32px;
+    }
+
+    .modo__text {
+        font-size: 16px;
+        line-height: 32px;
     }
 
     .sobre__content img {
         width: 108px;
         height: 120px;
-        padding: 30px;
+        margin-left: 45px;
     }
 
     .sobre {
@@ -679,48 +753,47 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         width: 50%;
         grid-template-columns: 1fr 2fr;
         gap: 18px;
+        margin-top: 10px;
     }
 
-    .modo {
-        padding-bottom: 50px;
-    }
-
-    .modo h3 {
-        font-size: 24px;
-    }
-
-    .vantagem__container img {
+    .vantagem img {
         width: 58px;
         height: 60px;
-        margin: 10px 10px 0 10px;
+        margin: 0 20px 0 0;
         align-self: start;
     }
 
-    .vantagem__container {
+    .vantagem {
         border-radius: 32px;
         margin: 0;
-        padding: 20px;
+        align-items: center;
+        padding: 24px;
         letter-spacing: 0.01em;
     }
 
-    .vantagens h2 {
-        margin: 50px 0 40px 0;
+    .vantagem__text {
+        line-height: 200%;
+        font-size: 16px;
+        width: 76%;
+        margin: 0;
     }
 
     .vantagens__containers {
+        margin-top: 30px;
         display: grid;
         padding-bottom: 50px;
         gap: 20px;
-        grid-template-columns: 40% 60%;
+        grid-template-rows: 120px 280px 0px 120px 0px 0 15px 263px 125px;
+        grid-template-columns: 43% 54%;
         grid-template-areas:
             "globo caderneta"
             "globo calendario"
             "globo diatodo"
             "mapa diatodo"
             "mapa terra"
+            "mapa terra"
             "aviao terra"
             "aviao terra"
-            "aviao ."
             "aviao ."
         ;
     }
@@ -731,7 +804,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
-        padding-bottom: 50px;
     }
 
 
@@ -740,13 +812,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .servico__container p {
-        width: 100%;
+        width: 103%;
         font-size: 16px;
         margin: 0 0 20px 20px;
     }
 
     .lixadeiro {
-        height: 388px;
+        height: 379px;
     }
 
     .footer__title {
@@ -761,9 +833,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         margin: 20px 0 0 0;
     }
 
+    form select {
+        background-position: 95% 50%;
+    }
+
     footer form {
         align-self: flex-start;
-        width: 80%;
+        width: 75%;
         margin-left: 50px;
     }
 
@@ -807,6 +883,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .midbutton {
         width: auto;
         font-size: 18px;
+        margin: 0;
     }
 
     .servico__subtitle {
@@ -820,5 +897,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     footer li {
         font-size: 18px;
+    }
+
+    .sobre__container {
+        margin-left: 35px;
+        width: 80%;
+    }
+
+    .sobre__container p {
+        width: 85%;
+        font-size: 16px;
+        margin: 8px 0 0 10px;
+        padding: 0;
     }
 }
