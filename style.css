@@ -495,7 +495,7 @@ header {
     padding: 0;
 }
 
-.servico__container p {
+.servico__container  {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
