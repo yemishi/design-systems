@@ -8,6 +8,9 @@
     --placeholder-color: #ADB5BD;
     --text-font: 'Open Sans', sans-serif;
     --title-font: 'Montserrat', sans-serif;
+    --hover--roxo: invert(35%) sepia(94%) saturate(2292%) hue-rotate(236deg) brightness(101%) contrast(94%);
+    /*filter de #845EF7 */
+    --active--roxo: invert(21%) sepia(86%) saturate(5865%) hue-rotate(254deg) brightness(92%) contrast(107%);
 }
 
 body {
@@ -41,9 +44,27 @@ main {
     margin: 10px 0 15px 0;
 }
 
+.menu__burguer:hover,
+.lupa:hover {
+    filter: var(--hover--roxo);
+}
+
+.menu__burguer:active,
+.lupa:active {
+    filter: var(--active--roxo);
+}
+
 .voltar {
     cursor: pointer;
     margin: 0 0 15px 0;
+}
+
+.closed__search:hover {
+    filter: invert(85%) sepia(94%) saturate(2292%) hue-rotate(236deg) brightness(101%) contrast(94%);
+}
+
+.closed__search:active {
+    filter: invert(100%) contrast(1000%);
 }
 
 .menu ul button {
@@ -56,7 +77,9 @@ main {
     border-radius: 8px;
     background-color: transparent;
     border: 1px solid #D3D7DB;
+    border-radius: 8px;
 }
+
 
 #menu__search {
     display: none;
@@ -85,6 +108,7 @@ header {
 .menu,
 .lupa {
     margin: 20px;
+    cursor: pointer;
 }
 
 .search__bar {
@@ -99,14 +123,26 @@ header {
 
 .search__lupa__roxa {
     margin: 0 0 0 20px;
+    cursor: pointer;
 }
 
-.search__close {
+.closed__search {
     margin: 0 0 0 20px;
+    cursor: pointer;
 }
 
 .search__bar::placeholder {
     color: var(--placeholder-color);
+}
+
+.search__bar:default::placeholder,
+.search__bar:hover::placeholder {
+    color: transparent;
+}
+
+.search__bar:hover,
+.search__bar:default {
+    border-bottom: none;
 }
 
 .banner {
@@ -170,6 +206,34 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.botao__roxo:hover,
+.acordo--concordo:hover {
+    border: 4px solid #5A27F2;
+}
+
+.botao__roxo:focus,
+.acordo--concordo:focus {
+    border: 4px solid #E1D4FF;
+}
+
+.botao__roxo:active,
+.acordo--concordo:active,
+.botao__branco:active {
+    color: #FFFFFf;
+    background-color: #5A27F2;
+    border: none;
+}
+
+.botao__branco:focus {
+    color: #FFFFFF;
+    border: 4px solid #F8F5FF;
+    background: #845EF7;
+}
+
+.botao__branco:hover {
+    color: #5A27F2;
 }
 
 .banner__container button {
@@ -257,7 +321,7 @@ header {
     font-family: var(--text-font);
     font-weight: 700;
     font-size: 14px;
-    margin: 10px 0 0;
+    margin: 10px 0 0 0;
 }
 
 .modo__container {
@@ -312,6 +376,27 @@ header {
     margin: 15px 0 5px 20px;
 }
 
+.servico__button svg path:hover,
+.servico__button svg path:active {
+    fill: #FFFFFF;
+
+}
+
+.servico__button svg {
+    border: 1px solid #845EF7;
+    border-radius: 8px;
+}
+
+.servico__button svg:hover {
+    border: none;
+    background: #845EF7;
+}
+
+.servico__button svg:active {
+    background: #5A27F2;
+    border: none;
+}
+
 .sobre__content {
     margin: 10px 0 10px 0;
     display: flex;
@@ -321,6 +406,7 @@ header {
     border: 1px solid #D3D7DB;
     border-radius: 16px;
     flex-direction: column;
+    background-color: #FFFFFF;
 }
 
 .sobre__content img {
@@ -342,6 +428,7 @@ header {
 
 .modo__banner img {
     width: 100%;
+    border-radius: 24px;
 }
 
 .modo__banner {
@@ -366,6 +453,7 @@ header {
     border-radius: 16px;
     justify-content: center;
     margin: 20px 0 10px 0;
+    background-color: #FFFFFF;
 }
 
 .vantagem__text {
@@ -407,7 +495,7 @@ header {
     padding: 0;
 }
 
-.servico__container {
+.servico__container p {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
@@ -490,6 +578,7 @@ form span {
     width: 24px;
     height: 24px;
     margin: 0;
+    cursor: pointer;
 }
 
 span label {
@@ -602,6 +691,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /*site para tablet*/
     {
+    .menu__burguer {
+        width: 30px;
+    }
+
+    .lupa {
+        width: 22px;
+    }
 
     .menu,
     .lupa {
@@ -611,11 +707,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .menu ul button {
         font-size: 18px;
         margin: 10px 30px 10px 30px;
+        padding: 20px;
     }
 
     .voltar {
         margin: 0 0 30px 30px;
         width: 20px;
+    }
+
+    .logo {
+        width: 73px;
+    }
+
+    .botao__branco:focus {
+        border: 4px solid #E1D4FF;
     }
 
     #menu__opcoes {
@@ -629,8 +734,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .banner {
-        background-position: 100%;
+        background-position: center;
         margin-top: 40px;
+        width: 85%;
     }
 
     .banner__text {
@@ -661,7 +767,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     .title {
         font-size: 48px;
-        margin: 30px 0 10px 0;
+        margin: 50px 0 25px 0;
+        width: 85%;
     }
 
     .middle__text {
@@ -671,11 +778,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .sobre span {
-        width: 90%;
+        width: 85%;
     }
 
     .sobre__banner {
-        grid-template-rows: 0px 475px 170px;
+        width: 85%;
+        grid-template-rows: 0px 450px 170px;
         border-radius: 24px 24px 34px 34px;
     }
 
@@ -706,16 +814,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         line-height: 180%;
         align-self: center;
         letter-spacing: 0.01em;
-        width: 72%;
+        width: 80%;
         font-size: 18px;
+    }
+
+    .modo {
+        width: 85%;
     }
 
     .modo__subtitle {
         line-height: 32px;
         font-size: 24px;
+        margin: 30px 0 0 0;
     }
 
     .sobre__content {
+        width: 85%;
         flex-direction: row;
         align-items: center;
         padding: 30px 0 30px 0px;
@@ -752,14 +866,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: grid;
         width: 50%;
         grid-template-columns: 1fr 2fr;
-        gap: 18px;
+        gap: 48px;
         margin-top: 10px;
     }
 
     .vantagem img {
         width: 58px;
         height: 60px;
-        margin: 0 20px 0 0;
+        margin: 0 20px 0 10px;
         align-self: start;
     }
 
@@ -767,24 +881,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         border-radius: 32px;
         margin: 0;
         align-items: center;
-        padding: 24px;
+        padding: 24px 10px 24px 10px;
         letter-spacing: 0.01em;
     }
 
     .vantagem__text {
-        line-height: 200%;
+        line-height: 32px;
         font-size: 16px;
-        width: 76%;
+        width: 73%;
         margin: 0;
     }
 
     .vantagens__containers {
-        margin-top: 30px;
+        width: 85%;
+        margin-top: 15px;
         display: grid;
         padding-bottom: 50px;
         gap: 20px;
-        grid-template-rows: 120px 280px 0px 120px 0px 0 15px 263px 125px;
-        grid-template-columns: 43% 54%;
+        grid-template-rows: 120px 275px 10px 120px 0px 0px 15px 275px 135px;
+        grid-template-columns: 44% 56%;
         grid-template-areas:
             "globo caderneta"
             "globo calendario"
@@ -799,7 +914,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .servicos {
-        width: 90%;
+        width: 85%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -812,13 +927,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .servico__container p {
-        width: 103%;
+        width: 112%;
         font-size: 16px;
         margin: 0 0 20px 20px;
     }
 
     .lixadeiro {
-        height: 379px;
+        height: 370px;
     }
 
     .footer__title {
@@ -878,6 +993,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         grid-template-areas:
             "item-1 . ."
             "item-4 item-2 item-3";
+        width: 80%;
+        margin-left: 50px;
+        align-self: start;
     }
 
     .midbutton {
@@ -905,7 +1023,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .sobre__container p {
-        width: 85%;
+        width: 90%;
         font-size: 16px;
         margin: 8px 0 0 10px;
         padding: 0;
