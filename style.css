@@ -935,6 +935,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .lixadeiro {
         height: 370px;
     }
+    .empilhador{
+        height: 370px;
+    }
 
     .footer__title {
         font-size: 48px;
