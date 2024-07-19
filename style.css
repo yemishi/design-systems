@@ -29,16 +29,8 @@ main {
   justify-content: center;
 }
 
-#menu__opcoes {
-  display: none;
-  background-color: #ffffff;
-  position: absolute;
-  width: 320px;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 20px;
-  border-radius: 0px 0px 16px 16px;
+button {
+  cursor: pointer;
 }
 
 @keyframes fadeInUp {
@@ -73,6 +65,32 @@ main {
     background-color: #845ef7;
   }
 }
+
+#menu__opcoes {
+  display: none;
+  background-color: #ffffff;
+  position: absolute;
+  width: 320px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+  border-radius: 0px 0px 16px 16px;
+  animation: fadeInUp 150ms linear;
+  li {
+    cursor: default;
+  }
+}
+#menu__opcoes button:hover {
+  background-color: #f8f5ff;
+}
+#menu__opcoes button:active {
+  background-color: #987cd9;
+  color: white;
+}
+#menu__opcoes button:focus {
+  background-color: #bca5f0;
+}
 .menu ul li {
   list-style: none;
   margin: 10px 0 15px 0;
@@ -96,8 +114,14 @@ button,
 .voltar {
   cursor: pointer;
   margin: 0 0 15px 0;
+  transition-duration: 150ms;
 }
-
+.voltar:hover {
+  filter: opacity(70%);
+}
+.voltar:active {
+  scale: 85%;
+}
 .closed__search:hover {
   filter: invert(85%) sepia(94%) saturate(2292%) hue-rotate(236deg)
     brightness(101%) contrast(94%);
@@ -127,6 +151,7 @@ button,
   border-radius: 0px 0px 32px 32px;
   background-color: var(--header-color);
   z-index: 20;
+  animation: fadeInUp 150ms linear;
 }
 
 .search__opcoes {
@@ -176,22 +201,15 @@ header {
   color: var(--placeholder-color);
 }
 
-.search__bar:default::placeholder,
-.search__bar:hover::placeholder {
-  color: transparent;
-}
-
-.search__bar:hover,
-.search__bar:default {
-  border-bottom: none;
-}
-
 .banner {
   background-image: url(assets/banner/varanda-mob.png);
   background-size: cover;
   width: 90%;
   border-radius: 24px;
   margin-top: 20px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cabecario {
@@ -303,6 +321,87 @@ header {
   padding: 13px 32px;
 }
 
+.midbutton {
+  width: 50%;
+  padding: 15px;
+  margin: 0 8px 0 8px;
+  font-size: 14px;
+}
+
+.modo span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 32px;
+  width: 90%;
+  margin: 10px 0 10px 0;
+}
+
+.middle__text {
+  font-family: var(--text-font);
+  font-weight: 400;
+  margin: 10px 0 15px 0;
+  width: 89%;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.modo__text {
+  font-family: var(--text-font);
+  font-weight: 400;
+  margin: 10px 0 15px 0;
+  font-size: 14px;
+  line-height: 24px;
+  width: 102%;
+}
+
+.modo__subtitle {
+  font-family: var(--text-font);
+  font-weight: 700;
+  font-size: 14px;
+  margin: 10px 0 0 0;
+}
+
+.modo__container {
+  width: 95%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tablink {
+  background-color: #e1d4ff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tablink:hover {
+  background-color: #c7b0ff;
+}
+
+.tablink.active {
+  background-color: #5a27f2;
+  color: white;
+}
+
+.tabcontent {
+  display: none;
+  justify-content: center;
+}
+
 .sobre button {
   width: 93%;
   margin: 20px 0 40px 0;
@@ -405,6 +504,23 @@ header {
   width: 100%;
 }
 
+.sobre__content {
+  margin: 10px 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  border: 1px solid #d3d7db;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.sobre__content img {
+  width: 55px;
+  margin: 15px 0 0 10px;
+  height: 65px;
+}
+
 .middle__subtitle {
   font-family: var(--text-font);
   font-weight: 700;
@@ -445,24 +561,6 @@ header {
   border: none;
 }
 
-.sobre__content {
-  margin: 10px 0 10px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 90%;
-  border: 1px solid #d3d7db;
-  border-radius: 16px;
-  flex-direction: column;
-  background-color: #ffffff;
-}
-
-.sobre__content img {
-  width: 55px;
-  margin: 15px 0 0 10px;
-  height: 65px;
-}
-
 .modo {
   width: 90%;
   display: flex;
@@ -483,6 +581,36 @@ header {
   margin: 20px 0 10px 0;
   display: grid;
   grid-template-columns: 1fr 0px;
+}
+
+.popup {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Fica fixo na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que o pop-up fique acima de outros elementos */
+}
+
+.popup__content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* Ajuste o tamanho do pop-up conforme necessário */
+  text-align: center;
+  position: relative;
+}
+
+.popup__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .vantagens {
@@ -795,6 +923,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media (min-width: 768px) {
+  .tabs {
+    width: 100%;
+  }
   .menu__burguer {
     width: 30px;
   }

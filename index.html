@@ -37,6 +37,7 @@
             <img class="logo" src="assets/header/logo.svg" alt="logotipo">
             <img class="lupa" onclick="clickSearch()" src="assets/header/lupa.svg" alt="">
             </svg>
+
             <div id="menu__search">
                 <div class="search__opcoes">
                     <input class="search__bar" type="search" placeholder="O que está procurando?">
@@ -45,6 +46,7 @@
                 </div>
             </div>
         </header>
+
         <div class="banner">
             <div class="banner__container">
                 <h1 class="banner__title">Projetos de alta complexidade</h1>
@@ -57,6 +59,7 @@
             </div>
         </div>
     </section>
+
     <main>
         <section class="sobre">
             <span>
@@ -64,18 +67,14 @@
                 <p class="middle__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     <br>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex ea commodo consequat.
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
                     <br>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua.
+                    et dolore magna aliqua.
                 </p>
             </span>
             <div class="sobre__banner">
@@ -89,24 +88,35 @@
                     <button class="botao__branco">Mais</button>
                 </div>
             </div>
-            <div class="sobre__content">
-                <img src="assets/icons/caixa.svg" alt="caixa">
-                <div class="sobre__container">
-                    <h3 class="middle__subtitle">Consultoria de arquitetura e decoração</h3>
-                    <p class="middle__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
+
+            <div class="tabs">
+                <button class="tablink active" onclick="openTab(event, 'Consultoria')">Consultoria</button>
+                <button class="tablink" onclick="openTab(event, 'Servicos')">Serviços</button>
+            </div>
+
+            <div id="Consultoria" class="tabcontent" style="display: flex;">
+                <div class="sobre__content">
+                    <img src="assets/icons/caixa.svg" alt="caixa">
+                    <div class="sobre__container">
+                        <h3 class="middle__subtitle">Consultoria de arquitetura e decoração</h3>
+                        <p class="middle__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="sobre__content">
-                <img src="assets/icons/engrenagens.svg" alt="engrenagens">
-                <div class="sobre__container">
-                    <h3 class="middle__subtitle">Serviço Arquiteto</h3>
-                    <p class="middle__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua..
-                    </p>
+
+            <div id="Servicos" class="tabcontent">
+                <div class="sobre__content">
+                    <img src="assets/icons/engrenagens.svg" alt="engrenagens">
+                    <div class="sobre__container">
+                        <h3 class="middle__subtitle">Serviço Arquiteto</h3>
+                        <p class="middle__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -138,10 +148,17 @@
                 </p>
             </div>
             <span>
-                <button class="botao__roxo midbutton">Mais</button>
+                <button class="botao__roxo midbutton"  id="open-popup">Mais</button>
                 <button class="botao__branco midbutton">Contrate-nos</button>
             </span>
         </section>
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <span class="popup__close" id="close-popup">&times;</span>
+                <p>Solicite um orçamento sem compromisso</p>
+            </div>
+        </div>
+
         <section class="vantagens">
             <h2 class="title">Vantagens</h2>
             <div class="vantagens__containers">
@@ -384,7 +401,7 @@
                 </li>
             </ul>
         </div>
-        
+
     </footer>
 
     <script>
@@ -419,6 +436,41 @@
                 event.preventDefault();
             }
         });
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        }
+        const openPopupButton = document.getElementById('open-popup');
+        const closePopupButton = document.getElementById('close-popup');
+        const popup = document.getElementById('popup');
+
+        function openPopup() {
+            popup.style.display = 'flex';
+        }
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        openPopupButton.addEventListener('click', openPopup);
+        closePopupButton.addEventListener('click', closePopup);
+        window.addEventListener('click', function (event) {
+            if (event.target === popup) {
+                closePopup();
+            }
+        });
+
     </script>
 </body>
 
