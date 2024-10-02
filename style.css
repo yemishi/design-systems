@@ -33,6 +33,10 @@ main {
 button {
   cursor: pointer;
   outline: none;
+  background-color: transparent;
+  border: none;
+
+
 }
 
 @keyframes fadeInUp {
@@ -40,29 +44,36 @@ button {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 5px red;
   }
+
   50% {
     box-shadow: 0 0 10px red;
   }
+
   100% {
     box-shadow: 0 0 5px red;
   }
 }
+
 @keyframes colorChange {
   0% {
     background-color: var(--purple--main);
   }
+
   50% {
     background-color: var(--purple-dark);
   }
+
   100% {
     background-color: var(--purple--main);
   }
@@ -79,38 +90,42 @@ button {
   padding: 20px 20px 40px 20px;
   border-radius: 0px 0px 16px 16px;
   animation: fadeInUp 150ms linear;
+
   li {
     cursor: default;
   }
 }
+
 .menu ul button:hover {
   background-color: var(--purple--super-light);
 }
+
 .menu ul button:focus,
 .menu ul button:active {
   color: white;
   background-color: var(--purple--main);
 }
+
 .menu ul li {
   list-style: none;
   margin: 10px 0 15px 0;
 }
+
 .menu__burguer,
 .lupa,
 button,
 .servicos__servico__button svg {
   transition-duration: 150ms;
 }
+
 .menu__burguer:hover,
 .lupa:hover {
-  filter: invert(35%) sepia(94%) saturate(2292%) hue-rotate(236deg)
-    brightness(101%) contrast(94%);
+  filter: invert(35%) sepia(94%) saturate(2292%) hue-rotate(236deg) brightness(101%) contrast(94%);
 }
 
 .menu__burguer:active,
 .lupa:active {
-  filter: invert(21%) sepia(86%) saturate(5865%) hue-rotate(254deg)
-    brightness(92%) contrast(107%);
+  filter: invert(21%) sepia(86%) saturate(5865%) hue-rotate(254deg) brightness(92%) contrast(107%);
 }
 
 .voltar {
@@ -118,15 +133,17 @@ button,
   margin: 0 0 15px 0;
   transition-duration: 150ms;
 }
+
 .voltar:hover {
   filter: opacity(70%);
 }
+
 .voltar:active {
   scale: 85%;
 }
+
 .search__close:hover {
-  filter: invert(85%) sepia(94%) saturate(2292%) hue-rotate(236deg)
-    brightness(101%) contrast(94%);
+  filter: invert(85%) sepia(94%) saturate(2292%) hue-rotate(236deg) brightness(101%) contrast(94%);
 }
 
 .search__close:active {
@@ -149,6 +166,8 @@ button,
 #search {
   display: none;
   position: absolute;
+  left: 0px;
+  top: 0px;
   width: 100%;
   border-radius: 0px 0px 32px 32px;
   background-color: var(--purple--super-light);
@@ -164,20 +183,34 @@ button,
 }
 
 header {
-  justify-content: space-between;
-  width: 100%;
-  display: flex;
+  padding: 20px;
+  width: -webkit-fill-available;
+  display: grid;
+  grid-template-areas: "menu logo lupa";
   background-color: var(--purple--super-light);
   align-items: center;
   border-radius: 0px 0px 32px 32px;
+
 }
 
-.menu,
-.lupa {
-  margin: 20px;
-  cursor: pointer;
+
+.menu {
+  grid-area: menu;
+  justify-self: start;
   z-index: 10;
 }
+
+.logo {
+  grid-area: logo;
+  justify-self: center;
+}
+
+
+.lupa {
+  grid-area: lupa;
+  justify-self: end;
+}
+
 
 .search__bar {
   line-height: 20px;
@@ -220,6 +253,13 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
+
+h2 {
+  font-family: var(--title-font);
+  font-weight: 400;
+}
+
 
 h1 {
   font-family: var(--title-font);
@@ -299,6 +339,7 @@ h1 {
   color: var(--purple-dark);
   border-color: var(--purple-dark);
 }
+
 .banner__container {
   animation: fadeInUp 2s ease-out forwards;
   position: relative;
@@ -309,22 +350,26 @@ h1,
 .banner__text {
   animation: fadeInUp 2s;
 }
+
 .banner button {
   width: 182px;
   height: 44px;
   animation: colorChange 2s infinite;
   font-family: var(--title-font);
 }
-.modo__buttons__container {
+
+.modo__buttons-container {
   display: grid;
   width: 100%;
   justify-items: center;
   grid-template-columns: 48% 48%;
   justify-content: space-between;
+
   button {
     width: 100%;
   }
 }
+
 .footer-acordo button {
   cursor: pointer;
   display: flex;
@@ -437,19 +482,18 @@ h1,
   font-family: var(--text-font);
 }
 
-.sobre span {
+.sobre__desc {
   width: 90%;
+
+  p {
+    width: 99%;
+  }
 }
 
-.sobre span p {
-  width: 99%;
-}
-
-h2 {
+.sobre__desc h2 {
   font-family: var(--title-font);
   font-weight: 400;
   font-size: 32px;
-  width: 90%;
   margin: 10px 0 10px 0;
 }
 
@@ -495,10 +539,12 @@ h2 {
   width: 90%;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 150px 0px 1fr;
+  grid-template-rows: 150px 1fr;
   text-align: center;
   border-radius: 16px;
   margin-bottom: 10px;
+
+
 }
 
 .sobre__info__container p {
@@ -585,8 +631,6 @@ h3 {
 
 .modo__banner {
   margin: 20px 0 10px 0;
-  display: grid;
-  grid-template-columns: 1fr 0px;
 }
 
 .popup {
@@ -623,26 +667,33 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: -webkit-fill-available;
+  padding: 15px 20px 15px 20px;
   background-color: var(--bg);
   margin: 50px 0 15px 0;
+
+  h2 {
+    align-self: flex-start;
+    margin: 0px;
+  }
 }
 
-.vantagems__vantagem {
+.vantagens__vantagem {
   display: flex;
   align-items: flex-start;
   border: 1px solid var(--stroke);
   border-radius: 16px;
   justify-content: center;
-  margin: 20px 0 10px 0;
   background-color: #ffffff;
   transition-duration: 0.3s;
 }
-.vantagems__vantagem:hover {
+
+.vantagens__vantagem:hover {
   margin-top: -10px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
-.vantagems__vantagem__text {
+
+.vantagens__vantagem__text {
   font-family: var(--text-font);
   font-size: 14px;
   font-weight: 400;
@@ -650,29 +701,27 @@ h3 {
   width: 65%;
 }
 
-.vantagems__vantagem img {
+.vantagens__vantagem img {
   margin: 15px 15px 0 0px;
 }
 
-.vantagens__containers {
-  width: 90%;
-}
-
 .servicos {
-  width: 100%;
   display: flex;
+  width: -webkit-fill-available;
+  padding: 0 20px 0 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+
+  h2 {
+    align-self: flex-start;
+  }
 }
 
 .servicos__servico {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 20px 0 0 0;
-  background-color: var(--bg);
 }
 
 .servicos p {
@@ -685,8 +734,10 @@ h3 {
   align-items: flex-start;
   justify-content: space-around;
   transition-duration: 150ms;
+  height: 100%;
   border-radius: 0 0 16px 16px;
   background-color: var(--bg);
+
 }
 
 .servicos__servico button {
@@ -699,9 +750,11 @@ h3 {
 .servicos__servico__imagem {
   border-radius: 16px 16px 0 0;
 }
-.servicos__servico__imagem:hover ~ .servicos__servico__container {
+
+.servicos__servico__imagem:hover~.servicos__servico__container {
   transform: translateY(-20px);
 }
+
 footer {
   background-color: #000000;
   display: flex;
@@ -755,16 +808,19 @@ form select {
   padding: 15px 15px 15px 10px;
   margin: 20px 0 0 0;
 }
+
 form input,
 form select {
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
+
 form input.error,
 form select.error {
   border: 1px solid red;
   animation: pulse 1s infinite;
   box-shadow: 0 0 5px red;
 }
+
 form span {
   color: #ffffff;
   display: flex;
@@ -786,12 +842,14 @@ span label {
   font-weight: 400;
 }
 
-form p {
+footer p {
   font-family: var(--text-font);
   font-size: 14px;
   line-height: 25px;
   color: #ffffff;
-  margin: 20px 0 20px 0;
+  align-self: flex-start;
+  width: 90%;
+  margin: 20px 0 20px 20px;
 }
 
 .footer-links__logo {
@@ -818,6 +876,7 @@ form p {
 .links li {
   margin: 15px 0 0 0;
 }
+
 .footer-links a {
   text-decoration: none;
   transition: color 0.3s, border-bottom 0.3s;
@@ -842,6 +901,7 @@ form p {
   border-bottom: 2px solid var(--purple-dark);
   color: var(--purple-dark);
 }
+
 input[type="date"]::-webkit-calendar-picker-indicator {
   background-image: url(assets/icons/calendario-icon.svg);
 }
@@ -884,22 +944,36 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: white;
   transition-duration: 200ms;
 }
+
 .footer-links__social a:hover {
   border-bottom: none;
 }
+
 .footer-links__social li:first-child:hover a {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+  background: linear-gradient(45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%);
 }
+
+.servicos__grid {
+  display: grid;
+  gap: 20px;
+}
+
+.vantagens__containers {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
 .footer-links__social li:nth-child(2):hover a {
   background: linear-gradient(45deg, #1877f2, #00a1f1);
 }
+
 .globo {
   grid-area: globo;
 }
@@ -930,16 +1004,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media (min-width: 768px) {
   .menu__burguer {
-    width: 30px;
+    img {
+      width: 30px;
+    }
   }
 
   .lupa {
-    width: 22px;
+
+    img {
+      width: 24px;
+    }
   }
 
-  .menu,
-  .lupa {
-    margin: 25px 40px 20px 40px;
+  .search__bar {
+    font-size: 18px;
+  }
+
+  .vantagens {
+    padding: 40px 40px 15px 40px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  header {
+    padding: 10px 35px;
   }
 
   .menu ul button {
@@ -969,9 +1059,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 72px;
     width: 300px;
   }
+
   .banner__container {
     padding: 0px 40px 60px 30px;
   }
+
   .banner {
     background-position: center;
     margin-top: 40px;
@@ -992,11 +1084,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 16px;
     font-size: 18px;
   }
-  .modo__buttons__container {
+
+  .modo__buttons-container {
     grid-template-columns: 30% 55%;
     justify-content: space-between;
     width: 45%;
   }
+
   .banner button {
     font-size: 18px;
     width: 210px;
@@ -1010,7 +1104,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   h2 {
     font-size: 48px;
     margin: 50px 0 25px 0;
-    width: 85%;
   }
 
   .paragraph-text {
@@ -1019,14 +1112,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 32px;
   }
 
-  .sobre span {
+  .sobre__desc {
     width: 85%;
   }
 
   .sobre__banner {
     width: 85%;
-    grid-template-rows: 0px 450px 170px;
+    grid-template-rows: 445px 170px;
     border-radius: 24px 24px 34px 34px;
+
+    img {
+      content: url("assets/banner/sobre-nos-tablet.png");
+    }
+
   }
 
   .sobre__text {
@@ -1048,7 +1146,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 18px 32px;
   }
 
-  .sobre span p {
+  .sobre__desc p {
     width: 95%;
   }
 
@@ -1078,6 +1176,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 32px;
   }
 
+  .servicos__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 362px;
+  }
+
   .modo__container p {
     font-size: 16px;
     line-height: 32px;
@@ -1100,8 +1203,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .modo__banner {
     margin: 20px 0 10px 0;
-    display: grid;
-    grid-template-columns: 0px 1fr;
+
+    img {
+      content: url("assets/banner/modo-tablet.png");
+    }
   }
 
   .modo span {
@@ -1112,14 +1217,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 10px;
   }
 
-  .vantagems__vantagem img {
+  .vantagens__vantagem img {
     width: 58px;
     height: 60px;
     margin: 0 20px 0 10px;
     align-self: start;
   }
 
-  .vantagems__vantagem {
+  .vantagens__vantagem {
     border-radius: 32px;
     margin: 0;
     align-items: center;
@@ -1127,7 +1232,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     letter-spacing: 0.01em;
   }
 
-  .vantagems__vantagem__text {
+  .vantagens__vantagem__text {
     line-height: 32px;
     font-size: 16px;
     width: 73%;
@@ -1135,8 +1240,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .vantagens__containers {
-    width: 85%;
     margin-top: 15px;
+    justify-content: center;
     display: grid;
     padding-bottom: 50px;
     gap: 20px;
@@ -1162,21 +1267,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-between;
   }
 
-  .servicos__servico {
-    width: 49%;
-  }
-
   .servicos__servico__container p {
     width: 112%;
     font-size: 16px;
     margin: 0 0 20px 20px;
-  }
-
-  .lixadeiro {
-    height: 370px;
-  }
-  .empilhador {
-    height: 370px;
   }
 
   .footer-title {
@@ -1252,8 +1346,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin: 15px 0 10px 20px;
   }
 
-  form p {
+  footer p {
     font-size: 16px;
+    margin-left: 50px;
+    width: 75%;
   }
 
   footer li {
@@ -1270,5 +1366,258 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 16px;
     margin: 8px 0 0 10px;
     padding: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  #menu__opcoes {
+    display: flex;
+  }
+
+  header {
+    grid-template-areas: "logo menu lupa";
+    padding: 10px 70px;
+
+    .logo {
+      justify-self: flex-start;
+      width: 106px;
+    }
+
+    .menu__burguer {
+      display: none;
+    }
+
+    #menu__opcoes {
+      width: auto;
+      background-color: transparent;
+      position: static;
+      padding: 0px;
+
+      .voltar {
+        display: none;
+      }
+
+      li {
+        margin: 0px;
+
+      }
+    }
+
+    .search__bar {
+      font-size: 20px;
+    }
+
+    .search__opcoes {
+      height: 62px;
+      font-size: 118px;
+    }
+  }
+
+  .banner {
+    background-image: url(assets/banner/varanda.png);
+    width: 93%;
+  }
+
+  h1 {
+    width: 837px;
+  }
+
+  .banner__text {
+    width: 680px;
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .sobre__info {
+    display: flex;
+  }
+
+  .sobre {
+    display: grid;
+    grid-template-areas: 'desc banner' 'consultoria banner' 'servicos banner';
+    justify-content: center;
+    width: auto;
+    gap: 40px;
+    padding: 75px;
+
+    button {
+      width: 108px;
+      height: 58px;
+    }
+
+    .sobre__info__content {
+      width: auto;
+      margin: 0;
+      padding: 40px 60px;
+
+      img {
+        width: 190px;
+        height: 165px;
+      }
+    }
+
+    .sobre__desc {
+      grid-area: desc;
+      width: auto;
+
+      h2 {
+        font-size: 48px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .sobre__banner {
+      grid-area: banner;
+      width: 868px;
+      grid-template-rows: 610px 245px;
+      margin-top: auto;
+
+      h3 {
+        font-size: 18px;
+        width: 478px;
+      }
+    }
+
+    #Servicos {
+      grid-area: servicos;
+    }
+
+    #Consultoria {
+      grid-area: consultoria;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .modo {
+    display: grid;
+    width: -webkit-fill-available;
+    padding: 0 60px;
+    grid-template-areas: 'title title' 'container banner' 'buttons banner';
+    justify-content: space-between;
+
+    h2 {
+      grid-area: title;
+    }
+
+    .modo__banner {
+      grid-area: banner;
+      width: 868px;
+      height: 427px;
+    }
+
+    .modo__container {
+      grid-area: container;
+      width: 758px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .modo__buttons-container {
+      grid-area: buttons;
+
+      button {
+        font-size: 18px;
+        padding: 32px 18px;
+      }
+
+    }
+  }
+
+  .vantagens__containers {
+
+    font-size: 18px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "globo globo globo caderneta diatodo "
+      "mapa aviao aviao aviao calendario"
+      "terra terra terra terra calendario"
+      "terra terra terra terra calendario"
+    ;
+
+  }
+
+  .vantagens__vantagem {
+    align-items: start;
+    justify-content: start;
+    padding: 40px;
+  }
+
+  .vantagens__vantagem__text {
+    width: auto;
+  }
+
+  .vantagens__containers {
+    width: auto;
+  }
+
+  .servicos__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 330px;
+  }
+
+  .servicos {
+    width: -webkit-fill-available;
+    padding: 0 40px 15px 40px;
+  }
+
+  .servicos__servico__imagem {
+    height: 165px;
+    object-fit: cover;
+  }
+
+  .servicos__servico:nth-child(6) {
+    .servicos__servico__imagem {
+      content: url(assets/servicos/medidor-desktop.png);
+    }
+  }
+
+  .servicos__servico:nth-child(4) {
+    .servicos__servico__imagem {
+      content: url(assets/servicos/empilhador-desktop.png);
+    }
+  }
+
+  .servicos__servico__container {
+    padding: 20px;
+
+    p {
+      width: auto;
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-areas: "links form p";
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+
+    form {
+      grid-area: form;
+      width: 85%;
+    }
+
+    p {
+      grid-area: p;
+      line-height: 32px;
+      margin-bottom: 30px;
+      margin-top: 130px;
+    }
+
+    .footer-links {
+      grid-area: links;
+      display: flex;
+      flex-direction: column;
+    }
+
   }
 }

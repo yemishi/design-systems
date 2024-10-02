@@ -10,10 +10,13 @@
 </head>
 
 <body>
+
     <section class="header-section">
         <header>
             <nav class="menu">
-                <img class="menu__burguer" onclick="clickMenu()" src="assets/header/Menu mobile.svg" alt="">
+                <button class="menu__burguer">
+                    <img onclick="clickMenu()" src="assets/header/Menu-mobile.svg" alt="burguer">
+                </button>
                 <ul id="menu__opcoes">
                     <img class="voltar" onclick="closeMenu()" src="assets/header/X.svg" alt="cancelar">
                     <li>
@@ -33,9 +36,13 @@
                     </li>
                 </ul>
             </nav>
-            <img class="logo" src="assets/header/logo.svg" alt="logo tipo">
-            <img class="lupa" onclick="clickSearch()" src="assets/header/lupa.svg" alt="">
-            </svg>
+
+            <img class="logo" src="assets/header/logo.svg" alt="logotipo">
+
+            <button class="lupa">
+                <img onclick="clickSearch()" src="assets/header/lupa.svg" alt="lupa">
+
+            </button>
 
             <div id="search">
                 <div class="search__opcoes">
@@ -61,7 +68,7 @@
 
     <main>
         <section class="sobre">
-            <span>
+            <div class="sobre__desc">
                 <h2>Sobre nós</h2>
                 <p class="paragraph-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -75,10 +82,10 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.
                 </p>
-            </span>
+            </div>
             <div class="sobre__banner">
                 <img src="assets/banner/sobre-nos.png" alt="analisando o projeto">
-                <img src="assets/banner/sobre-nos-tablet.png" alt="analisando o projeto">
+
                 <div class="sobre__text">
                     <h3>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -124,7 +131,6 @@
             <h2>Como trabalhamos</h2>
             <div class="modo__banner">
                 <img src="assets/banner/modo-mob.png" alt="anotando sobre o projeto">
-                <img src="assets/banner/modo-tablet.png" alt="anotando sobre o projeto">
             </div>
             <div class="modo__container">
                 <h3>Realizamos uma consulta</h3>
@@ -147,7 +153,7 @@
                     dolore magna aliqua.
                 </p>
             </div>
-            <div class="modo__buttons__container">
+            <div class="modo__buttons-container">
                 <button class="button-purple" id="open-popup">Mais</button>
                 <button class="button-white">Contrate-nos</button>
             </div>
@@ -162,177 +168,184 @@
         <section class="vantagens">
             <h2>Vantagens</h2>
             <div class="vantagens__containers">
-                <div class="vantagems__vantagem globo">
+                <div class="vantagens__vantagem globo">
                     <img src="assets/icons/globo.svg" alt="globo caindo">
-                    <p class="vantagems__vantagem__text">
+                    <p class="vantagens__vantagem__text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
-                <div class="vantagems__vantagem caderneta">
+                <div class="vantagens__vantagem caderneta">
                     <img src="assets/icons/caderneta.svg" alt="caderneta">
-                    <p class="vantagems__vantagem__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="vantagens__vantagem__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="vantagems__vantagem diatodo">
+                <div class="vantagens__vantagem diatodo">
                     <img src="assets/icons/24.svg" alt="vinte e quatro horas">
-                    <p class="vantagems__vantagem__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor
+                    <p class="vantagens__vantagem__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </p>
                 </div>
-                <div class="vantagems__vantagem mapa">
+                <div class="vantagens__vantagem mapa">
                     <img src="assets/icons/mapa.svg" alt="mapa">
-                    <p class="vantagems__vantagem__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="vantagens__vantagem__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="vantagems__vantagem aviao">
+                <div class="vantagens__vantagem aviao">
                     <img src="assets/icons/aviao.svg" alt="aviao">
-                    <p class="vantagems__vantagem__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <p class="vantagens__vantagem__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
-                <div class="vantagems__vantagem calendario">
+                <div class="vantagens__vantagem calendario">
                     <img src="assets/icons/calendario.svg" alt="calendario">
-                    <p class="vantagems__vantagem__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi
+                    <p class="vantagens__vantagem__text">
+                        But replicated from foreign sources, modern research is blocked within its own rational limits.
+                        Similarly, a deep level of immersion allows you to perform important tasks for the design of
+                        experiments
                     </p>
                 </div>
-                <div class="vantagems__vantagem terra">
+                <div class="vantagens__vantagem terra">
                     <img src="assets/icons/globo-terrestre.svg" alt="globo terrestre">
-                    <p class="vantagems__vantagem__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <p class="vantagens__vantagem__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
             </div>
         </section>
         <section class="servicos">
             <h2>Serviços</h2>
+            <div class="servicos__grid">
+                <div class="servicos__servico">
+                    <img class="servicos__servico__imagem" src="assets/servicos/ferreiro.png"
+                        alt="ferreiro trabalhando">
+                    <div class="servicos__servico__container">
+                        <span class="servicos__servico__text">
+                            <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
+                            <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </span>
+                        <button class="servicos__servico__button">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6_202)">
+                                    <path
+                                        d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
+                                        fill="#845EF7" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
 
-            <div class="servicos__servico">
-                <img class="servicos__servico__imagem" src="assets/servicos/ferreiro.png" alt="ferreiro trabalhando">
-                <div class="servicos__servico__container">
-                    <span class="servicos__servico__text">
-                        <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
-                        <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </span>
-                    <button class="servicos__servico__button">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_6_202)">
-                                <path
-                                    d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
-                                    fill="#845EF7" />
-                            </g>
-                        </svg>
-                    </button>
+                <div class="servicos__servico">
+                    <img class="servicos__servico__imagem" src="assets/servicos/trator.png" alt="trator">
+                    <div class="servicos__servico__container">
+                        <span class="servicos__servico__text">
+                            <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
+                            <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </span>
+                        <button class="servicos__servico__button">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6_202)">
+                                    <path
+                                        d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
+                                        fill="#845EF7" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="servicos__servico">
+                    <img class="servicos__servico__imagem" src="assets/servicos/lixadeiro.png" alt="lixando a madeira">
+                    <div class="servicos__servico__container">
+                        <span class="servicos__servico__text">
+                            <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
+                            <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </span>
+                        <button class="servicos__servico__button">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6_202)">
+                                    <path
+                                        d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
+                                        fill="#845EF7" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="servicos__servico">
+                    <img class="servicos__servico__imagem" src="assets/servicos/empilhador.png" alt="empilhando">
+                    <div class="servicos__servico__container">
+                        <span class="servicos__servico__text">
+                            <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
+                            <p class="paragraph-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </span>
+                        <button class="servicos__servico__button">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6_202)">
+                                    <path
+                                        d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
+                                        fill="#845EF7" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="servicos__servico">
+                    <img class="servicos__servico__imagem" src="assets/servicos/furadeira.png" alt="furando">
+                    <div class="servicos__servico__container">
+                        <span class="servicos__servico__text">
+                            <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
+                            <p class="paragraph-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </span>
+                        <button class="servicos__servico__button">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6_202)">
+                                    <path
+                                        d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
+                                        fill="#845EF7" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="servicos__servico">
+                    <img class="servicos__servico__imagem" src="assets/servicos/medidor.png" alt="medindo">
+                    <div class="servicos__servico__container">
+                        <span class="servicos__servico__text">
+                            <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
+                            <p class="paragraph-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </span>
+                        <button class="servicos__servico__button">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6_202)">
+                                    <path
+                                        d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
+                                        fill="#845EF7" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <div class="servicos__servico">
-                <img class="servicos__servico__imagem" src="assets/servicos/trator.png" alt="trator">
-                <div class="servicos__servico__container">
-                    <span class="servicos__servico__text">
-                        <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
-                        <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </span>
-                    <button class="servicos__servico__button">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_6_202)">
-                                <path
-                                    d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
-                                    fill="#845EF7" />
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="servicos__servico lixadeiro">
-                <img class="servicos__servico__imagem" src="assets/servicos/lixadeiro.png" alt="lixando a madeira">
-                <div class="servicos__servico__container">
-                    <span class="servicos__servico__text">
-                        <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
-                        <p class="paragraph-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </span>
-                    <button class="servicos__servico__button">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_6_202)">
-                                <path
-                                    d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
-                                    fill="#845EF7" />
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="servicos__servico empilhador">
-                <img class="servicos__servico__imagem" src="assets/servicos/empilhador.png" alt="empilhando">
-                <div class="servicos__servico__container">
-                    <span class="servicos__servico__text">
-                        <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
-                        <p class="paragraph-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </span>
-                    <button class="servicos__servico__button">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_6_202)">
-                                <path
-                                    d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
-                                    fill="#845EF7" />
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="servicos__servico">
-                <img class="servicos__servico__imagem" src="assets/servicos/furadeira.png" alt="furando">
-                <div class="servicos__servico__container">
-                    <span class="servicos__servico__text">
-                        <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
-                        <p class="paragraph-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </span>
-                    <button class="servicos__servico__button">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_6_202)">
-                                <path
-                                    d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
-                                    fill="#845EF7" />
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="servicos__servico">
-                <img class="servicos__servico__imagem" src="assets/servicos/medidor.png" alt="medindo">
-                <div class="servicos__servico__container">
-                    <span class="servicos__servico__text">
-                        <h3 class="servicos__servico__subtitle">Lorem ipsum</h3>
-                        <p class="paragraph-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </span>
-                    <button class="servicos__servico__button">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_6_202)">
-                                <path
-                                    d="M16.7814 16L13.4814 12.7L14.4241 11.7573L18.6668 16L14.4241 20.2427L13.4814 19.3L16.7814 16Z"
-                                    fill="#845EF7" />
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
         </section>
     </main>
     <footer>
@@ -356,17 +369,17 @@
                 </span>
                 <button>Concluir</button>
             </div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-                <br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor
-                incididunt ut labore et
-                dolore magna aliqua.
-            </p>
         </form>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor
+            incididunt ut labore et
+            dolore magna aliqua.
+        </p>
         <div class="footer-links">
             <img class="footer-links__logo item-1" src="assets/footer/logo-footer.svg" alt="logotipo">
             <ul class="links item-2">
