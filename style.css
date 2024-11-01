@@ -433,13 +433,11 @@ h1,
 .tabs__action {
   background-color: var(--purple--light);
   font-family: var(--title-font);
-  width: 170px !important;
-  font-weight: 600;
-  border: none;
   padding: 14px 16px;
   border-radius: 8px;
+  font-weight: 600;
   transition: 0.3s;
-  font-size: 17px;
+  width: 100px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1006,6 +1004,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     img {
       width: 30px;
     }
+  }
+
+  .tabs__action {
+    font-size: 17px;
+    width: 170px !important;
   }
 
   .lupa {
